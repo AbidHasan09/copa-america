@@ -1,5 +1,5 @@
 *{
-
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -7,6 +7,43 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
+/* Navigation Area */
+header {
+    position: relative;
+    width: 1050px;
+    margin: auto;
+}
+
+.main-menu {
+    padding-top: 20px;
+    position: absolute;
+    display: flex;
+    width: 1050px;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.main-menu .left-menu ul {
+    list-style: none;
+}
+
+.main-menu .left-menu ul li {
+    display: inline-block;
+}
+
+.main-menu .left-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding-right: 40px;
+}
+
+.right-menu a {
+    background: #E02C6D;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #fff;
+}
+
 /* hero-area styel  */
 .hero-area{
     background-color: #2D25A0;
@@ -19,17 +56,16 @@ body{
     margin-left: 48px;
     margin-right: 32px; 
 }
-.headline-text{
-    width:485px;
-    height:230px;
-    margin-left:156px;
-    margin-top:207px;
-    margin-bottom:240px;
+
+.headline-text {
+    width: 485px;
+    height: 230px;
+    margin-top: 207px;
+    margin-bottom: 240px;
     font-size: 32px;
     line-height: 80px;
     font-weight: bold;
     color: #FFFFFF;
-
 }
 
 .btn{
@@ -42,11 +78,10 @@ body{
     color:lightgrey;
 
 }
-.hero-image img{
-    width: 556px;
-    Height:438px; 
-    margin-right:140px;
-    margin-top:153px;
+.hero-image img {
+    width: 100%;
+    Height: auto;
+    margin-top: 153px;
     margin-bottom: 86px;
     margin-left: 115px;
 }
@@ -69,10 +104,11 @@ body{
     background: #FFFFFF;  
 }
 
-.player-single { 
+.player-single {
     padding: 15px;
-    width: 290px;
-    height: 400px;
+    width: 100%;
+    height: 430px;
+    box-shadow: 1px 1px 5px 0px rgba(0 0 0, .20);
 }
 
 .player-img img{
@@ -94,16 +130,18 @@ line-height: 40px;
     font-size: 15px;
 }
 /* container section style  */
-.row{
-    display:grid;
+.row {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
-   
+    width: 1050px;
+    margin: auto;
 }
+
 .text-area{
     width: 469px;
     height: 120px;
-    margin-left: 275px;
     margin-top:200px;
+    margin-right: 30px;
 }
 .text-area h1{
     font-size: 48px;
@@ -123,10 +161,9 @@ line-height: 40px;
     color:black;
 }
 .images img{
-    width: 560px;
-    height: 427px;
-    Height:438px; 
-    margin-right:140px;
+    width: 100%;
+    height: auto;
+    Height:438px;
     margin-top: 118px;
     margin-bottom: 86px;
    
@@ -137,7 +174,7 @@ line-height: 40px;
  /* from section style  */
  .form-section{
 	width:100%;
-    height: 850px;
+    height: auto;
     background-image: url(../images/copa.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -182,7 +219,7 @@ line-height: 40px;
 }
 
 .form label{
-	color:#00000;
+	color:#000;
 	font-size:18px;
 	font-weight:bold;
 	margin-bottom:10px;
@@ -190,30 +227,41 @@ line-height: 40px;
 	display:inline-block;
 	
 }
+
   /* footer section style  */
-.footer-conter{
+  .footer-conter {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 158px;
+    width: 483px;
+    margin: auto;
+    padding-top: 80px;
 }
-.footer-conter img{
-    width: 444px;
-    height: 118px;
+.footer-conter img {
+    width: 100%;
+    height: auto;
 }
-.icon .fab{
+
+
+.icon .fab {
     flex: none;
-    width: 63px;
-    height: 38px;
-    font-size: 15px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
     text-align: center;
     margin-right: 5px;
-   margin-bottom: 13px;
-   padding-top: 20px;
-   background-color: #969BAB;
-   border-radius: 40px;
+    margin-bottom: 13px;
+    padding-top: 10px;
+    background-color: #969BAB;
+    border-radius: 40px;
+    transition: 0.3s;
 }
+
+.icon .fab:hover {
+    background-color: #5cd3ff;
+}
+
 .icon a.fa-instagram a{
     border: 2px solid lightgray;
     margin:0 10px 0 10px;
@@ -222,12 +270,15 @@ line-height: 40px;
     text-align: center;
     line-height: 40px;
 }
-/*----------------
+/*-----------------
   media queries 
   ------------------*/
-  @media only screen and (max-width:688px;) {
-       .body{
-           background-color: red;
-       }
+  @media (max-width: 480px) {
+    .row {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        margin: auto;
     }
+  }
     
